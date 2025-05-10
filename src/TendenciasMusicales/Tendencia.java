@@ -17,6 +17,7 @@ public class Tendencia implements MetodosPopularidad{
     @Override
     public void cambiarEstado(Cancion cancion) {
         if(cancion.getUltimaReproduccion().isBefore(LocalDate.now())) {
+            System.out.println("Baja a normal por la ult reproduccion");
             cancion.setPopularidad(new Normal());
         } else {
             System.err.println("La cancion sigue estando en tendencia.");

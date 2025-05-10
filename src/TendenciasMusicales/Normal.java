@@ -15,6 +15,7 @@ public class Normal implements MetodosPopularidad{
     @Override
     public void cambiarEstado(Cancion cancion) {
         if(cancion.getReproducciones() > 1000) {
+            System.out.println("Pasara a ser auge");
             cancion.setPopularidad(new Auge());
         } else {
             System.err.println("La cancion no posee mas de 1000 reproducciones.");
